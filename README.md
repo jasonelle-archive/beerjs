@@ -7,5 +7,5 @@ www.beerjs.cl/santiago event.
 
 ## How to Use
 
-- Use Jason App to Scan QR Codes
+- Use [Jason App](https://github.com/jasonelle/docs/tree/develop/examples/jasonette/apps/jason-app) to Scan QR Codes
 - Upload files to own server or use `python3 -m http.server` and `ngrok` to create a testing one.
