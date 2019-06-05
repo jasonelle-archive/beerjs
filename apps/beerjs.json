@@ -1,0 +1,51 @@
+{
+    "$jason": {
+        "head": {
+            "title": "BeerJS Santiago",
+            "description": "This example demostrate how to inject code inside a website and catch ahref links",
+            "actions": {
+                "$load": {
+                    "type" : "$render",
+                    "success": {
+                        "type": "$agent.inject",
+                            "options" : {
+                                "id" : "$webcontainer",
+                                "items" : [
+                                    {
+                                        "url" : "https://code.jquery.com/jquery-3.4.1.min.js"
+                                    },
+                                    {
+                                        "url" : "CHANGE_ME_WITH_VALID_URL/fixes.js"
+                                    }
+                                ]
+                            }
+                    }
+                },
+                "linkcatcher" : {
+                    "type" : "$util.alert",
+                    "options" : {
+                        "title" : "Link Clicked",
+                        "description" : "Jason {{$jason.url}} clicked"
+                    } 
+                }
+            },
+            "templates": {
+                "body": {
+                    "header": {
+                        "title": "BeerJS Santiago",
+                        "style": {
+                            "background" : "#F8DC3D"
+                        }
+                    },
+                    "background": {
+                        "type": "html",
+                        "url": "https://beerjs.cl/santiago",
+                        "action": {
+                            "trigger": "linkcatcher"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

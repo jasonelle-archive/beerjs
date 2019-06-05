@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: white;
+        }
+        #qr {
+            padding-top: 50px;
+            text-align: center;
+        }
+        #qr img {
+            width: 50%;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script>
+        let img;
+        window.onload = () => {
+            img = new QRCode(document.querySelector("#qr"), "");
+        };
+        
+        // This function is available for calling inside Jasonette JSON
+        const qr = (val) => {
+            img.makeCode(val);
+            document.querySelector("#text").innerHTML = val;
+        };
+
+    </script>
+</head>
+<body>
+    <div id="qr"></div>
+    <div id="text">Empty</div>
+</body>
+</html>
