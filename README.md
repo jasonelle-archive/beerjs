@@ -10,6 +10,9 @@ www.beerjs.cl/santiago event.
 - Use [Jason App](https://github.com/jasonelle/docs/tree/develop/examples/jasonette/apps/jason-app) to Scan QR Codes
 - Upload files to own server or use `python3 -m http.server` and `ngrok` to create a testing one.
 
+- App.zip contains sample app using the event data.
+- A project in https://github.com/jasonelle/beerjs/releases have setup a working xcode project
+
 ## LICENSE
 - Code: MIT
 - Presentation: [Creative Commons By NC SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
